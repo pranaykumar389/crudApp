@@ -1,0 +1,24 @@
+{
+  "name": "crud-app",
+  "version": "1.0.0",
+  "description": "A simple CRUD app  where user can Create, Read, Update, and Delete",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranaykumar389/crudApp.git"
+  },
+  "author": "\"Pranay Kumar\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranaykumar389/crudApp/issues"
+  },
+  "homepage": "https://github.com/pranaykumar389/crudApp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.2"
+  }
+}
