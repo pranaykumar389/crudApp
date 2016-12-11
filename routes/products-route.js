@@ -1,7 +1,8 @@
 'use strict';
 var express = require('express'),
-    productsRoute = express.Router();
+    productsRoute = express.Router(),
+    products = require('./products-list.js');
 
-customerRoute.get('/', products.list);
+productsRoute.get('/', products.list);
 
-module.exports = customerRoute;
+module.exports = productsRoute;
