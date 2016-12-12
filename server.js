@@ -25,6 +25,10 @@ app.use(bodyParser.json());
 var productsRoute = require('./routes/products-route'); 
 app.use('/api/products', productsRoute);
 
+//Client
+app.use('/', express.static('client'));
+app.use('/bower_components', express.static('bower_components'));
+
 
 //Server Connection
 app.listen(3000, function() {
