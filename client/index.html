@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <title>CRUD APP</title>
@@ -8,6 +8,9 @@
         <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/controllers/app.js"></script>
+        <script src="/client-models/product.model.js"></script>
+        <script src="/client-models/productlist.js"></script>
     </head>
     <body>
 
@@ -37,13 +40,12 @@
                 </div>
             </div>
         </nav>
-        
-        <div class="container">
 
-            
+        <div class="container-fluid">
+            <product-list></product-list>
 
-            <footer>
-                <p>&copy; Designed and Developed By Pranay Kumar</p>
+            <footer class="text-center">
+                <p>&copy; Designed and Developed by Pranay Kumar</p>
             </footer>
         </div>
     </body>

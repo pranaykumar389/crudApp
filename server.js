@@ -27,6 +27,7 @@ app.use('/api/products', productsRoute);
 
 //Client
 app.use('/', express.static('client'));
+app.use('/client-models', express.static('client/models'));
 app.use('/bower_components', express.static('bower_components'));
 
 
