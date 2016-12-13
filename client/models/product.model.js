@@ -1,1 +1,4 @@
-angular.module('myProductModel', []);
+(function() {    
+    angular.module('myProductModel', []);
+    
+})();
