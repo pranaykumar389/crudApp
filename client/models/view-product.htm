@@ -1,6 +1,4 @@
-<h2>View Porduct</h2>
-
-<div class="col-md-6">
-    <p>{{$ctrl.name}}</p>
-    <p>{{$ctrl.description}}</p>
+<div class="col-md-6" ng-repeat="product in $ctrl.viewProduct">
+    <h2>{{product.name}}</h2>
+    
 </div>
