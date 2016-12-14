@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CRUD APP</title>
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="main.css">
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
@@ -18,7 +19,7 @@
     <body>
 
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -44,15 +45,11 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
-
-            <!--<a class="btn btn-info" ui-sref="productList">Product List</a>-->
+        <div class="container">
             <ui-view></ui-view>
-
-            
-            <footer class="text-center navbar navbar-inverse navbar-static-bottom">
-                <p>&copy; Designed and Developed by Pranay Kumar</p>
-            </footer>
         </div>
+        <footer class="text-center navbar navbar-inverse navbar-static-bottom">
+            <p>&copy; Designed and Developed by Pranay Kumar</p>
+        </footer>
     </body>
 </html>

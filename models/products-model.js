@@ -17,7 +17,15 @@ var mongoose = require('mongoose'),
             trim: true,
             required: true
         },
-        Specs: {
+        specs: {
+            type: Array,
+            required: true
+        },
+        price: {
+            type: Number,
+            required: true
+        },
+        images: {
             type: Array,
             required: true
         },
