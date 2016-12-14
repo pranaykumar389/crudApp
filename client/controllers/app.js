@@ -7,6 +7,7 @@
                     template: '<product-list></product-list>'
                 })
                 .state('productList.viewProduct', {
+                    parent : 'productList',
                     url: 'view-product/:productId',
                     template: '<view-product></view-product>'
                 });
