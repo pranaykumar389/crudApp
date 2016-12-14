@@ -6,9 +6,9 @@
                     url: '/',
                     template: '<product-list></product-list>'
                 })
-                .state('viewProduct', {
-                    url: 'productList./view-product/:productId',
+                .state('productList.viewProduct', {
+                    url: 'view-product/:productId',
                     template: '<view-product></view-product>'
-                })
+                });
         });
 })();
