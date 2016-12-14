@@ -19,7 +19,7 @@ var mongoose = require('mongoose'),
         },
         Specs: {
             type: Array,
-            required: false
+            required: true
         },
         createdDate: {
             type: Date,
