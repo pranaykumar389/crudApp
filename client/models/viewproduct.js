@@ -5,7 +5,7 @@
             controller: function($http, $stateParams) {
                 var ctrl = this;
 
-                $http.get('/api/products/' + $stateParams.id).then(function(result) {
+                $http.get('/api/products/' + $stateParams.productId).then(function(result) {
                     ctrl.viewProduct = result.data;
                     console.log(ctrl.viewProduct);
                 })
