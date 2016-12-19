@@ -32,7 +32,7 @@ var products = {
             products = new Products({
                 name: productData.name,
                 description: productData.description,
-                Specs: productData.Specs,
+                specs: productData.specs,
                 price: productData.price
             });
         products.save(function(err, result) {

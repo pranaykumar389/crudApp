@@ -6,6 +6,9 @@
         </a>
         <p>{{product.description}}</p>
         <p><b>{{product.price | currency}}</b></p>
-        <p><a class="btn btn-info" ui-sref="productList.viewProduct({productId: '{{product._id}}'})" role="button">View details &raquo;</a></p>
+        <p>
+            <a class="btn btn-info" ui-sref="productList.viewProduct({productId: '{{product._id}}'})" role="button">View details &raquo;</a>
+            <a class="btn btn-info pull-right" ui-sref="addProduct.editProduct({productId: '{{product._id}}'})" role="button">Edit</a>
+        </p>
     </div>
 </div>

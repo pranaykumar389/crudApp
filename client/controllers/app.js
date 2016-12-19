@@ -10,6 +10,10 @@
                     parent : 'productList',
                     url: 'view-product/:productId',
                     template: '<view-product></view-product>'
+                })
+                .state('addProduct', {
+                    url: 'add-product',
+                    template: '<add-product></add-product>'
                 });
         });
 })();

@@ -19,7 +19,6 @@ var mongoose = require('mongoose'),
         },
         specs: {
             type: Array,
-            required: true
         },
         price: {
             type: Number,
@@ -27,7 +26,6 @@ var mongoose = require('mongoose'),
         },
         images: {
             type: Array,
-            required: true
         },
         createdDate: {
             type: Date,
