@@ -5,18 +5,18 @@
             controller: function($http, $state) {
                 var ctrl = this;
 
-                ctrl.options = [
-                    {
-                        id: 'option1'
-                    }
-                ];
+                ctrl.options = [{
+                    value: null
+                }];
+                
                 ctrl.addOption = function() {
-                    var newOption = ctrl.options.length + 1;
-                    ctrl.options.push({'id': 'option' + newOption});
+                    ctrl.options.push({value: null});
                 }
-                ctrl.removeOption = function() {
-                    var newOption = ctrl.options.length - 1;
-                    ctrl.options.splice(newOption);
+
+                ctrl.removeOption = function(index) {
+                    ctrl.options = ctrl.options.filter(function(obj, objIndex){
+                        return objIndex != index;
+                    });
                 }
 
                 ctrl.choices = [
@@ -37,7 +37,7 @@
                     $http.post('/api/products', {
                         name: ctrl.name,
                         description: ctrl.description,
-                        specs: [],
+                        specs: ctrl.options.map(function(item) {return item.value;}),
                         price: ctrl.price,
                         images: []
                     }).then(function(status) {

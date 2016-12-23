@@ -22,12 +22,12 @@
         <div class="form-group">
             <label for="specs" class="col-sm-2 control-label">Specifications</label>
             <div class="col-sm-6">
-                <div class="row" ng-repeat="option in $ctrl.options">
+                <div class="row" ng-repeat="option in $ctrl.options track by $index">
                     <div class="col-sm-10">
                         <input ng-model="option.value" type="text" class="form-control" id="specs" placeholder="Specifications"><br/>
                     </div>
                     <div class="col-sm-2">
-                        <button class="btn btn-default" ng-click="$ctrl.removeOption()">Remove</button>
+                        <button class="btn btn-default" ng-click="$ctrl.removeOption($index)">Remove</button>
                     </div>
                 </div>
             </div>
