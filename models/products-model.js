@@ -18,14 +18,14 @@ var mongoose = require('mongoose'),
             required: true
         },
         specs: {
-            type: Array,
+            type: Array
         },
         price: {
             type: Number,
             required: true
         },
         images: {
-            type: Array,
+            type: String
         },
         createdDate: {
             type: Date,

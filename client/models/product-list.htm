@@ -2,13 +2,13 @@
     <div class="col-md-4" ng-repeat="product in $ctrl.productList">
         <h2><a ui-sref="productList.viewProduct({productId: '{{product._id}}' })">{{product.name}}</a></h2>
         <a class="thumbnail">
-            <img ng-src="{{product.images[0]}}" alt="{{product.name}}"/>
+            <img ng-src="{{product.images}}" alt="{{product.name}}"/>
         </a>
         <p>{{product.description}}</p>
         <p><b>{{product.price | currency}}</b></p>
         <p>
             <a class="btn btn-info" ui-sref="productList.viewProduct({productId: '{{product._id}}'})" role="button">View details &raquo;</a>
-            <a class="btn btn-info pull-right" ui-sref="addProduct.editProduct({productId: '{{product._id}}'})" role="button">Edit</a>
+            <a class="btn btn-info pull-right" ui-sref="productList.editProduct({productId: '{{product._id}}'})" role="button">Edit</a>
         </p>
     </div>
 </div>

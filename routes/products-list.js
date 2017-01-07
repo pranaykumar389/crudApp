@@ -33,7 +33,8 @@ var products = {
                 name: productData.name,
                 description: productData.description,
                 specs: productData.specs,
-                price: productData.price
+                price: productData.price,
+                images: productData.images
             });
         products.save(function(err, result) {
             if(err) {
@@ -56,8 +57,9 @@ var products = {
             }else {
                 result.name = productData.name;
                 result.description = productData.description;
-                result.Specs = productData.Specs;
+                result.specs = productData.specs;
                 result.price = productData.price;
+                result.images = productData.images;
 
                 result.save(function(err) {
                     if(err) {
