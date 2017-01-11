@@ -8,7 +8,6 @@
 
                 $http.get('/api/products').then(function(result) {
                     ctrl.productList = result.data;
-                    console.log(ctrl.productList);
                 })
                 .catch(function(err) {
                     console.error('An error occurred', err);

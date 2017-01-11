@@ -35,12 +35,23 @@
                         price: ctrl.getProduct.price,
                         images: ctrl.getProduct.images
                     }).then(function(status) {
-                        console.log($stateParams.productId);
-                        console.log(status);
                         $state.go('productList');
                     }).catch(function(err) {
                         console.error(err);
                     });
+                }
+
+                ctrl.deleteProduct = function() {
+                    var confirmMsg = confirm('Are you want to delete the product?');
+                    if(confirmMsg) {
+                        $http.delete('/api/products/' + $stateParams.productId).then(function(result) {
+                            ctrl.deleteProduct = result.data;
+                            console.log(ctrl.deleteProduct);
+                            $state.go('productList');
+                        }).catch(function(err) {
+                            console.error(err);
+                        });
+                    }
                 }
             }
         });

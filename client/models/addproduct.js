@@ -26,7 +26,6 @@
                         price: ctrl.price,
                         images: ctrl.images
                     }).then(function(status) {
-                        console.log(status);
                         $state.go('productList');
                     }).catch(function(err) {
                         console.error(err);
