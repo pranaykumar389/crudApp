@@ -5,9 +5,7 @@
             controller: function($http, $stateParams, $state) {
                 var ctrl = this;
 
-                ctrl.options = [{
-                    value: null
-                }];
+                ctrl.options = [];
                 
                 ctrl.addOption = function() {
                     ctrl.options.push({value: null});
@@ -22,24 +20,27 @@
                 ctrl.getProduct = function() {
                     $http.get('/api/products/' + $stateParams.productId).then(function(result) {
                         ctrl.getProduct = result.data;
-                        console.log(ctrl.getProduct);
+                        var specs = ctrl.getProduct.specs;
+                        for(var i = 0; i < specs.length; i++) {
+                            ctrl.options.push({value: specs[i]});
+                        }
                     });
                 }
 
                 ctrl.editProduct = function() {
                     $http.put('/api/products/' + $stateParams.productId, {
-                        name: ctrl.name,
-                        description: ctrl.description,
+                        name: ctrl.getProduct.name,
+                        description: ctrl.getProduct.description,
                         specs: ctrl.options.map(function(item) {return item.value;}),
-                        price: ctrl.price,
-                        images: ctrl.images
+                        price: ctrl.getProduct.price,
+                        images: ctrl.getProduct.images
                     }).then(function(status) {
                         console.log($stateParams.productId);
-                        console.log('status');
+                        console.log(status);
                         $state.go('productList');
                     }).catch(function(err) {
                         console.error(err);
-                    })
+                    });
                 }
             }
         });

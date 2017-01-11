@@ -11,6 +11,11 @@
                     url: 'view-product/:productId',
                     template: '<view-product></view-product>'
                 })
+                .state('productList.editProduct', {
+                    parent: 'productList',
+                    url: 'edit-product/:productId',
+                    template: '<edit-product></edit-product>'
+                })
                 .state('addProduct', {
                     url: 'add-product',
                     template: '<add-product></add-product>'
