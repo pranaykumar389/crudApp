@@ -1,5 +1,5 @@
 <div class="row" ui-view>
-    <div class="col-md-4" ng-repeat="product in $ctrl.productList">
+    <div class="col-sm-6 col-md-4" ng-repeat="product in $ctrl.productList">
         <h2><a ui-sref="productList.viewProduct({productId: '{{product._id}}' })">{{product.name}}</a></h2>
         <a class="thumbnail">
             <img ng-src="{{product.images}}" alt="{{product.name}}"/>

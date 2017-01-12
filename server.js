@@ -2,8 +2,14 @@
 
 var express = require('express'),
     app = express(),
+    cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    mongoose = require('mongoose');
+    mongoose = require('mongoose')
+    expressValidator = require('express-validator'),
+    expressSession = require('express-session'),
+    flash = require('connect-flash'),
+    passport = require('passport'),
+    LocalStrategy = require('passport-local');
 
 //Mongoose Connection
 mongoose.connect('mongodb://localhost/myApp');
@@ -16,10 +22,11 @@ db.once('open', function() {
 //Require Mongoose Model
 require('./models/products-model.js');
 
-//bodyParser Middleware
+//Middlewares
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-
+app.use(cookieParser());
+app.use(expressSession())
 
 //Routes
 var productsRoute = require('./routes/products-route'); 
